@@ -1,0 +1,25 @@
+.banner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.brandName {
+    color: black;
+    text-align: left;
+}
+
+.bannerText {
+    text-align: left;
+}
+
+.bannerImage {
+    background-image: url('../../public/hero.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 20rem;
+    width: 30rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

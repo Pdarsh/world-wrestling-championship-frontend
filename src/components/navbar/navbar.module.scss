@@ -1,0 +1,22 @@
+.navbar {
+    display: flex;
+    margin-bottom: 2rem;
+    justify-content: flex-start;
+}
+
+
+.navList {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+
+    .navItems {
+        margin-right: 2rem;
+        font-size: larger;
+        // border-right: solid 0.1px;
+        // padding-right: 2rem;
+    }
+}

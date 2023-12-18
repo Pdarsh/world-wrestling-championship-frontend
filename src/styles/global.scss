@@ -1,0 +1,34 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  //   animation: 1s ease-out 0s 1 movePage;
+
+}
+
+#__next {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: #f0f0f0;
+  //   color: var(--eb-gray-deprecated-400);
+  //   font: 14px/21px var(--eem-base-font-family);
+}
+
+@keyframes movePage {
+  100% {
+    transform: translateY(-100%);
+  }
+
+  0% {
+    transform: translateY(0);
+  }
+}
