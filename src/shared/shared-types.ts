@@ -11,9 +11,9 @@ export type Wrestler = {
 
 export type TMatch = {
   id: number;
-  matchDate: string;
-  matchType: string;
-  showName: string;
-  winnerId:number[];
-  wrestlersInvolved:string[];
+  match_date: string;
+  match_type: string;
+  show_name: string;
+  winner_id:number[];
+  wrestlers_involved:string[];
 }

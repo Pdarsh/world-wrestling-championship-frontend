@@ -1,0 +1,11 @@
+.gridContainer{
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 1fr 1fr;
+    font-family: fantasy;
+    color: #0d0448;
+    border: solid 0.2rem #f0f0f0;
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.6);
+    margin: 2rem;
+    padding: 1rem;
+    background-color: #e0beff;
+}
