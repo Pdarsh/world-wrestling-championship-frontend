@@ -14,9 +14,15 @@
     margin: 0;
 
     .navItems {
-        margin-right: 2rem;
-        font-size: larger;
-        // border-right: solid 0.1px;
-        // padding-right: 2rem;
+        button {
+            background: none;
+            margin-right: 2rem;
+            font-size: larger;
+            color: inherit;
+            border: none;
+            font-family: inherit;
+            cursor: pointer;
+
+        }
     }
 }

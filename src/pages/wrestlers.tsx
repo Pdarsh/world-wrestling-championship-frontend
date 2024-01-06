@@ -1,15 +1,27 @@
 import React from "react";
+import Error from "next/error";
 import Layout from "@/components/layout/layout";
 import Card from "@/components/card/card";
 import styles from "../styles/wrestler.module.scss";
 import { Wrestler } from "@/shared/shared-types";
-import { useSelector } from "react-redux";
-import { RootState } from "@/redux/store";
+import { fetchWrestlers } from "@/redux/actions";
+import axios from "axios";
 
-const Wrestlers = () => {
-  const wrestlers: Wrestler[] = useSelector(
-    (state: RootState) => state.wrestlers.wrestlers
-  );
+interface WrestlersProps {
+  wrestlers: Wrestler[]
+  error?: {
+    message:string;
+    status:number;
+};
+  
+}
+
+const Wrestlers: React.FC<WrestlersProps> = ({wrestlers, error}) => {
+
+  if (error) {
+    return <Error title={error.message} statusCode={error.status} />;
+  }
+
 
   return (
     <Layout>
@@ -34,5 +46,30 @@ const Wrestlers = () => {
     </Layout>
   );
 };
+
+
+export const getServerSideProps = async () => {
+  try{
+      const apiUrl = "http://localhost:3001/wrestlers";
+      const response = await axios.get(apiUrl);
+      const wrestlers = response.data.data;
+      return { props: { wrestlers } }
+
+  } catch (error:any) {
+      const {
+          response: { status = "", statusText = "", data = {} } = {}
+        } = error;
+    
+        const message = data?.message
+          ? `${statusText}. ${data?.message}`
+          : statusText || error.message;
+    
+        return {
+          props: { error: { message, status } }
+        };
+
+  }
+
+}
 
 export default Wrestlers;
