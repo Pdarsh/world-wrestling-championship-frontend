@@ -11,7 +11,7 @@ const TransparentButton: React.FC<TransparentButtonProps> = ({
   const router = useRouter();
 
   const handleClick = () => {
-    router.push("/match");
+    router.push("/about");
   };
   return (
     <button className={styles.transparentButton} onClick={handleClick}>

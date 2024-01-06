@@ -19,7 +19,7 @@ const Home: React.FC = () => {
   return (
     <Layout>
       <Head>
-        <title>Home | My Wrestling App</title>
+        <title>Home | World Wrestling Championship</title>
       </Head>
       <Navbar />
       <div className={styles.banner}>

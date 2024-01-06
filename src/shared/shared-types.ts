@@ -8,3 +8,12 @@ export type Wrestler = {
     matches_won: string;
     image_url: string;
   };
+
+export type TMatch = {
+  id: number;
+  matchDate: string;
+  matchType: string;
+  showName: string;
+  winnerId:number[];
+  wrestlersInvolved:string[];
+}
