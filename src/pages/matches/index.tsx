@@ -4,6 +4,7 @@ import { TMatch } from "@/shared/shared-types";
 import MatchDetail from "@/components/match-detail/match-detail";
 import Error from "next/error";
 import Layout from "@/components/layout/layout";
+import TransparentButton from "@/components/transparent-button/transparent-button";
 
  
 type TProps = {
@@ -22,6 +23,7 @@ const Matches: React.FC<TProps> = ({ error, matches }) => {
 
     return(
         <Layout>
+            <TransparentButton buttonText={"Start a match"} location={"matches/create"}/>
             <MatchDetail matches={matches}/>
         </Layout>
     )
