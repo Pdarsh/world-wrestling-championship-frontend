@@ -14,6 +14,7 @@ export type TMatch = {
   match_date: string;
   match_type: string;
   show_name: string;
-  winner_id:number[];
-  wrestlers_involved:string[];
+  winner_id: number[];
+  wrestlers_involved_name: string[];
+  wrestlers_involved_id: number[];
 }
