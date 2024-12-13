@@ -13,12 +13,8 @@ const Match = () => {
   return (
     <Layout>
       <div className={styles.match}>
-        <div>
           <VerticalCarousel items={wrestlers} />
-        </div>
-        <div>
           <VerticalCarousel items={wrestlers} />
-        </div>
       </div>
     </Layout>
   );
